@@ -1,0 +1,2 @@
+#!/bin/bash
+echo "IPTables/DNSBL Update Script Version 6.0.1-b "
