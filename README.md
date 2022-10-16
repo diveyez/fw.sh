@@ -1,8 +1,19 @@
 # fw.sh - BASH scripts for IPTABLES
 
-- A simple, yet complex firewall written for BASH scripting.
+This script set grabs malicious and spam listed internet protocol 4 addresses, and sets rules to ensure that the large malicious networks and compromised hosts are not able to directly access your machine to scan, identify vulnerabilities and exploit your linux servers.
+
+- Fair Warning, it is not safe to operate networked infrastructure on the standard ports if any kind of control could be obtained. In other words, change your SSH port. Change API ports from the default. 
+
+**The recent changes in the IT world taught me one thing, the hacking is now automated and it is scanning specific ports and identifiable pathways for further exploitation.**
+
+
+For best results, use this with Fail2Ban, Snort, and PortSentry as well. 
+You can configure those to output the IP addresses into a file, and then use that information with the blacklist scripting to ensure your own personal pests are dealth with swiftly.
+You will then have a nice set of tools to stop attacks at the network level if used on a nodebalancer, or a gateway machine.
+
 - iptables is required for this script
 - screen & tcpdump are required for this script
+
 
 ## DISCLAIMER: _Do not try to operate this unless you know what you are doing. I am not responsible for you locking yourself out of your own systems._
 
