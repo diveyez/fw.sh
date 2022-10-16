@@ -29,7 +29,6 @@
             bash ./release.version
             sleep 1
             echo "Getting lists..."
-            echo "We do all the hardwork for you!"
             progress=${_start}
             status="Starting"
             ProgressBar ${progress} "${status}"
