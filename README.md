@@ -1,8 +1,18 @@
-# fw.sh - BASH scripts for IPTABLES
+# fw.sh - Network Defense BASH scripts for IPTABLES
+
 
 This script set grabs malicious and spam listed internet protocol 4 addresses, and sets rules to ensure that the large malicious networks and compromised hosts are not able to directly access your machine to scan, identify vulnerabilities and exploit your linux servers.
 
-- Fair Warning, it is not safe to operate networked infrastructure on the standard ports if any kind of control could be obtained. In other words, change your SSH port. Change API ports from the default. 
+
+A few key points to note when dealing with this script bundle.
+
+**This Script Bundle Alone Is Not A Full Defense Against Attacks** you will need to incorporate this with other tools in order to accomplish a fully secure system or network.
+
+**Fair Warning**, it is not safe to operate networked infrastructure on the standard ports if any kind of control could be obtained in the current age we live in. In other words, change your SSH port. Change API ports from the default. 
+
+**2022 Best Practice, Disable PAM Authentication unless protected with key handshakes or Two Factor Authentication. Breaches occur from AI exploit development frameworks everyday. THOSE HOSTS ARE IN THE LISTS USED WITHIN THIS FIREWALLING SCRIPT BUNDLE.**
+Without Fail2Ban you would be at the mercy of password dictionary attacks and worse, social engineering could lead to becoming compromised and passwords could be used to gain access.
+
 
 **The recent changes in the IT world taught me one thing, the hacking is now automated and it is scanning specific ports and identifiable pathways for further exploitation.**
 
