@@ -111,19 +111,19 @@
 # UNCOMMENT THE LINE IF YOU NEED OPENVPN RULES
 
 # For SSH Port ( Default 22, Customize At Your Leisure):
-                    ProgressBar ${progress} "SSH Allowance"
-                    ((progress=progress+20))
-                                                            sleep 1.5
-                    echo "$SSH_CLIENT"
-                    echo "Above should be your ssh ip client port and server port (external), this is the number we need."
-                    read -p "What Port is SSH on: (default 22)" sshport
-                    iptables -A INPUT -p tcp --dport $sshport -m state --state NEW,ESTABLISHED -j ACCEPT >> /dev/null 2>&1
-                    iptables -A OUTPUT -p tcp --sport $sshport -m state --state NEW,ESTABLISHED -j ACCEPT >> /dev/null 2>&1
-                    sleep 1.5
-                    ((progress=progress+40))
-                    ProgressBar ${progress} "HTTP/HTTPS 'NGINX/APACHE/LIGHTTPD NEEDS THIS'"
-                    sleep 1.5
-                    clear
+#                    ProgressBar ${progress} "SSH Allowance"
+#                    ((progress=progress+20))
+#                                                            sleep 1.5
+#                    echo "$SSH_CLIENT"
+#                    echo "Above should be your ssh ip client port and server port (external), this is the number we need."
+#                    read -p "What Port is SSH on: (default 22)" sshport
+#                    iptables -A INPUT -p tcp --dport $sshport -m state --state NEW,ESTABLISHED -j ACCEPT >> /dev/null 2>&1
+#                    iptables -A OUTPUT -p tcp --sport $sshport -m state --state NEW,ESTABLISHED -j ACCEPT >> /dev/null 2>&1
+#                    sleep 1.5
+#                    ((progress=progress+40))
+#                    ProgressBar ${progress} "HTTP/HTTPS 'NGINX/APACHE/LIGHTTPD NEEDS THIS'"
+#                    sleep 1.5
+#                    clear
 # Allow SSH tunnel ###############
 #iptables -A INPUT -i lo -j ACCEPT >> /dev/null 2>&1
 #iptables -A OUTPUT -o lo -j ACCEPT >> /dev/null 2>&1
@@ -151,9 +151,9 @@
                     ProgressBar ${progress} "The screen will look frozen while we geo block, this is to prevent application breaklines."
 #                    screen -d -m -S geo-block bash geo-block.sh >> /dev/null 2>&1
 #  REJECT ALL OTHER ###############
-                    ProgressBar ${progress} "ADDING A REJECT ALL OTHER RULE"
-                    iptables -A INPUT -j REJECT >> /dev/null 2>&1
-                    iptables -A OUTPUT -j ACCEPT >> /dev/null 2>&1
+#                    ProgressBar ${progress} "ADDING A REJECT ALL OTHER RULE"
+#                    iptables -A INPUT -j REJECT >> /dev/null 2>&1
+#                    iptables -A OUTPUT -j ACCEPT >> /dev/null 2>&1
                     sleep 1.5
                     ((progress=progress+20))
                     progress=100
