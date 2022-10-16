@@ -131,10 +131,10 @@
 #iptables -A OUTPUT -o $internal_interface -j ACCEPT >> /dev/null 2>&1
 # Allow HTTP and HTTPS connections from anywhere
                     # (the normal ports for web servers).
-                    iptables -A INPUT -p tcp --dport 80 -m state --state NEW -j ACCEPT >> /dev/null 2>&1
-                    iptables -A INPUT -p tcp --dport 443 -m state --state NEW -j ACCEPT >> /dev/null 2>&1
-                    iptables -A OUTPUT -p tcp --sport 80 -m state --state NEW -j ACCEPT >> /dev/null 2>&1
-                    iptables -A OUTPUT -p tcp --sport 443 -m state --state NEW -j ACCEPT >> /dev/null 2>&1
+#                    iptables -A INPUT -p tcp --dport 80 -m state --state NEW -j ACCEPT >> /dev/null 2>&1
+#                    iptables -A INPUT -p tcp --dport 443 -m state --state NEW -j ACCEPT >> /dev/null 2>&1
+#                    iptables -A OUTPUT -p tcp --sport 80 -m state --state NEW -j ACCEPT >> /dev/null 2>&1
+#                    iptables -A OUTPUT -p tcp --sport 443 -m state --state NEW -j ACCEPT >> /dev/null 2>&1
                     sleep 1.5
 # DDOS PROTECTION DISENGAGED | UNCOMMENT AND EXECUTE TO ENGAGE
 # ./dofw-ddos.sh
