@@ -73,8 +73,8 @@
             sleep 1
             echo "Rules Set: Adding Blocked Addresses."
             clear
-            echo "Hey, Go Get Some Coffee."
-            echo "This is gonna take a while."
+            echo "Take a break, let this run for a while."
+            echo "Creating Rules for: ALL KNOWN MALICIOUS HOSTS"
             cat fw-list.blocked fw-list2.blocked fw-custom-bans.blocked | sort | uniq > /tmp/fw-list-merged-nodups.blocked
             _end=`cat /tmp/fw-list-merged-nodups.blocked | wc -l`
             counter=1
@@ -86,6 +86,7 @@
             sleep 2.5
             clear
 ########################################################
-printf '\nFirewall Is Finished Updating. Please Run This Script Every 7 Days.\n'
+printf '\nFirewall Is Finished Updating. Please Run This Script Every Day for Best Results.\n'
 printf '\nThe DdoS Attack Capture/Dumps will be located at /tmp/dump/* \n'
-printf '\ndofw.sh (fw.sh) Is A Project Of GitHub.com/diveyez If You Got It Somewhere Else, Question Everything =)\n'
+printf '\nIt would be wise to ln -s the dir to the repository directories and create your own blacklist as I have with fw-custom-blacklist so that your own attackers are in the next rule set.'
+printf '\n(fw.sh) Is A Project Of GitHub.com/diveyez If You Got It Somewhere Else, Question Everything =)\n'
